@@ -85,20 +85,20 @@ class HomeFragment : Fragment() {
         val sharedPref = activity?.getSharedPreferences(
             getString(R.string.quiz_settings_sharedPrefs), Context.MODE_PRIVATE)
 
-        val questionSetting = sharedPref?.getString(getString(R.string.question_format_key), getString(R.string.question_format_value_french_text))
+        val questionSetting = sharedPref?.getString(getString(R.string.question_format_key), getString(R.string.question_format_value_spanish_text))
         val answerSetting = sharedPref?.getString(getString(R.string.answer_format_key), getString(R.string.answer_format_value_english_text))
         val categorySetting = sharedPref?.getString(getString(R.string.phrase_category_key),getString(R.string.all_phrases_category))
 
         when (questionSetting){
             getString(R.string.question_format_value_english_text) -> mQuestionEnglishText.isChecked = true
-            getString(R.string.question_format_value_french_text) -> mQuestionFrenchText.isChecked = true
-            getString(R.string.question_format_value_french_audio) -> mQuestionFrenchAudio.isChecked = true
+            getString(R.string.question_format_value_spanish_text) -> mQuestionFrenchText.isChecked = true
+            getString(R.string.question_format_value_spanish_audio) -> mQuestionFrenchAudio.isChecked = true
         }
 
         when (answerSetting) {
             getString(R.string.answer_format_value_english_text) -> mAnswerEnglishText.isChecked = true
-            getString(R.string.answer_format_value_french_text) -> mAnswerFrenchText.isChecked = true
-            getString(R.string.answer_format_value_french_audio) -> mAnswerFrenchAudio.isChecked = true
+            getString(R.string.answer_format_value_spanish_text) -> mAnswerFrenchText.isChecked = true
+            getString(R.string.answer_format_value_spanish_audio) -> mAnswerFrenchAudio.isChecked = true
         }
 
 
@@ -118,12 +118,12 @@ class HomeFragment : Fragment() {
         }
 
         mQuestionFrenchText.setOnClickListener {
-            editor?.putString(getString(R.string.question_format_key), getString(R.string.question_format_value_french_text))
+            editor?.putString(getString(R.string.question_format_key), getString(R.string.question_format_value_spanish_text))
             editor?.apply()
         }
 
         mQuestionFrenchAudio.setOnClickListener {
-            editor?.putString(getString(R.string.question_format_key), getString(R.string.question_format_value_french_audio))
+            editor?.putString(getString(R.string.question_format_key), getString(R.string.question_format_value_spanish_audio))
             editor?.apply()
         }
 
@@ -133,12 +133,12 @@ class HomeFragment : Fragment() {
         }
 
         mAnswerFrenchText.setOnClickListener {
-            editor?.putString(getString(R.string.answer_format_key), getString(R.string.answer_format_value_french_text))
+            editor?.putString(getString(R.string.answer_format_key), getString(R.string.answer_format_value_spanish_text))
             editor?.apply()
         }
 
         mAnswerFrenchAudio.setOnClickListener {
-            editor?.putString(getString(R.string.answer_format_key), getString(R.string.answer_format_value_french_audio))
+            editor?.putString(getString(R.string.answer_format_key), getString(R.string.answer_format_value_spanish_audio))
             editor?.apply()
         }
 

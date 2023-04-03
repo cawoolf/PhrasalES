@@ -38,32 +38,32 @@
            android:layout_width="50dp"
            android:layout_height="50dp"
            android:layout_margin="8dp"
-           android:background="@drawable/france_flag_1"/>
+           android:background="@drawable/spain_flag_1"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
 
     </LinearLayout>
 
@@ -106,12 +106,12 @@
                     android:id="@+id/settings_question_french_text_radioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/question_format_value_french_text"/>
+                    android:text="@string/question_format_value_spanish_text"/>
                 <RadioButton
                     android:id="@+id/settings_question_french_audio_radioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/question_format_value_french_audio"/>
+                    android:text="@string/question_format_value_spanish_audio"/>
             </RadioGroup>
         </LinearLayout>
 
@@ -157,12 +157,12 @@
                     android:id="@+id/settings_answer_french_text_radioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_format_value_french_text"/>
+                    android:text="@string/answer_format_value_spanish_text"/>
                 <RadioButton
                     android:id="@+id/settings_answer_french_audio_radioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_format_value_french_audio"/>
+                    android:text="@string/answer_format_value_spanish_audio"/>
             </RadioGroup>
         </LinearLayout>
 

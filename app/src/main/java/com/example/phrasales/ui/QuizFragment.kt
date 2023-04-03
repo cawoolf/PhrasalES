@@ -239,8 +239,8 @@ class QuizFragment : Fragment() {
 
             answerPhrase = mAnswerPhrasesSet.elementAt(mAnswerPhrasesIndexArray[0])
 
-            if (mAnswerSetting.toString() == getString(R.string.answer_format_value_french_audio) ||
-                mAnswerSetting.toString() == getString(R.string.answer_format_value_french_text)
+            if (mAnswerSetting.toString() == getString(R.string.answer_format_value_spanish_audio) ||
+                mAnswerSetting.toString() == getString(R.string.answer_format_value_spanish_text)
             ) {
                 val frenchText = answerPhrase.phraseFrench
                 mPhrasalUtil.useTextToSpeech(frenchText)
@@ -261,8 +261,8 @@ class QuizFragment : Fragment() {
 
             answerPhrase = mAnswerPhrasesSet.elementAt(mAnswerPhrasesIndexArray[1])
 
-            if (mAnswerSetting.toString() == getString(R.string.answer_format_value_french_audio) ||
-                mAnswerSetting.toString() == getString(R.string.answer_format_value_french_text)
+            if (mAnswerSetting.toString() == getString(R.string.answer_format_value_spanish_audio) ||
+                mAnswerSetting.toString() == getString(R.string.answer_format_value_spanish_text)
             ) {
                 val frenchText = answerPhrase.phraseFrench
                 mPhrasalUtil.useTextToSpeech(frenchText)
@@ -282,8 +282,8 @@ class QuizFragment : Fragment() {
 
             answerPhrase = mAnswerPhrasesSet.elementAt(mAnswerPhrasesIndexArray[2])
 
-            if (mAnswerSetting.toString() == getString(R.string.answer_format_value_french_audio) ||
-                mAnswerSetting.toString() == getString(R.string.answer_format_value_french_text)
+            if (mAnswerSetting.toString() == getString(R.string.answer_format_value_spanish_audio) ||
+                mAnswerSetting.toString() == getString(R.string.answer_format_value_spanish_text)
             ) {
                 val frenchText = answerPhrase.phraseFrench
                 mPhrasalUtil.useTextToSpeech(frenchText)
@@ -303,8 +303,8 @@ class QuizFragment : Fragment() {
 
             answerPhrase = mAnswerPhrasesSet.elementAt(mAnswerPhrasesIndexArray[3])
 
-            if (mAnswerSetting.toString() == getString(R.string.answer_format_value_french_audio) ||
-                mAnswerSetting.toString() == getString(R.string.answer_format_value_french_text)
+            if (mAnswerSetting.toString() == getString(R.string.answer_format_value_spanish_audio) ||
+                mAnswerSetting.toString() == getString(R.string.answer_format_value_spanish_text)
             ) {
                 val frenchText = answerPhrase.phraseFrench
                 mPhrasalUtil.useTextToSpeech(frenchText)
@@ -340,14 +340,14 @@ class QuizFragment : Fragment() {
             mQuestionTextView.text = mQuestionPhrase.phraseEnglish
         }
 
-        if (mQuestionSetting.toString() == getString(R.string.question_format_value_french_text)) {
+        if (mQuestionSetting.toString() == getString(R.string.question_format_value_spanish_text)) {
             mQuestionTextView.visibility = View.VISIBLE
             mQuestionImageButton.visibility = View.VISIBLE
             mQuestionTextView.text = mQuestionPhrase.phraseFrench
 
             mPhrasalUtil.useTextToSpeech(mQuestionPhrase.phraseFrench)
         }
-        if (mQuestionSetting.toString() == getString(R.string.answer_format_value_french_audio)) {
+        if (mQuestionSetting.toString() == getString(R.string.answer_format_value_spanish_audio)) {
             mQuestionTextView.visibility = View.INVISIBLE
             mQuestionImageButton.visibility = View.VISIBLE
 
@@ -366,7 +366,7 @@ class QuizFragment : Fragment() {
                 mAnswerPhrasesSet.elementAt(mAnswerPhrasesIndexArray[3]).phraseEnglish
         }
 
-        if (mAnswerSetting.toString() == getString(R.string.answer_format_value_french_text)) {
+        if (mAnswerSetting.toString() == getString(R.string.answer_format_value_spanish_text)) {
             mAnswerTextViewA.text =
                 mAnswerPhrasesSet.elementAt(mAnswerPhrasesIndexArray[0]).phraseFrench
             mAnswerTextViewB.text =
@@ -377,7 +377,7 @@ class QuizFragment : Fragment() {
                 mAnswerPhrasesSet.elementAt(mAnswerPhrasesIndexArray[3]).phraseFrench
         }
 
-        if (mAnswerSetting.toString() == getString(R.string.answer_format_value_french_audio)) {
+        if (mAnswerSetting.toString() == getString(R.string.answer_format_value_spanish_audio)) {
             mAnswerTextViewA.text = ""
             mAnswerTextViewB.text = ""
             mAnswerTextViewC.text = ""
@@ -406,7 +406,7 @@ class QuizFragment : Fragment() {
         mQuestionSetting =
             sharedPref?.getString(
                 getString(R.string.question_format_key),
-                getString(R.string.question_format_value_french_text)
+                getString(R.string.question_format_value_spanish_text)
             ).toString()
         mAnswerSetting =
             sharedPref?.getString(

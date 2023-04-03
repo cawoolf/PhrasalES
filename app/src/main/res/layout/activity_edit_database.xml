@@ -72,32 +72,32 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@drawable/france_flag_1"/>
+            android:background="@drawable/spain_flag_1"/>
 
     </LinearLayout>
 

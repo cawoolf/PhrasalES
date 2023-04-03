@@ -1,6 +1,5 @@
 package com.example.phrasales.util
 
-
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -59,8 +58,8 @@ class DownloadModelActivity : AppCompatActivity() {
             .addOnFailureListener {
                 // Error.
             }
-        // Download the French model.
-        val frenchModel = TranslateRemoteModel.Builder(TranslateLanguage.FRENCH).build()
+        // Download the Spanish model.
+        val frenchModel = TranslateRemoteModel.Builder(TranslateLanguage.SPANISH).build()
         val conditions = DownloadConditions.Builder()
             .requireWifi()
             .build()

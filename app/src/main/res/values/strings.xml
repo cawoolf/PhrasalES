@@ -5,7 +5,7 @@
     <string name="title_phrases">Phrases</string>
     <string name="quiz_settings_sharedPrefs">Quiz Settings SharedPreferences</string>
 
-    <string name="home_header_phrase">Bonjour! \n Ready to practice French?</string>
+    <string name="home_header_phrase">¡Hola! \n Ready to practice Spanish?</string>
     <string name="edit_db_header_phrase">Here are all your Phrases! </string>
 
     <!-- Keys for Quiz Settings HashMap -->
@@ -20,12 +20,12 @@
     <string name="verb_value_future_proche">futur porche</string>
 
     <string name="question_format_value_english_text">English Text</string>
-    <string name="question_format_value_french_text">French Text</string>
-    <string name="question_format_value_french_audio">French Audio</string>
+    <string name="question_format_value_spanish_text">Spanish Text</string>
+    <string name="question_format_value_spanish_audio">Spanish Audio</string>
 
     <string name="answer_format_value_english_text">English Text</string>
-    <string name="answer_format_value_french_text">French Text</string>
-    <string name="answer_format_value_french_audio">French Audio</string>
+    <string name="answer_format_value_spanish_text">Spanish Text</string>
+    <string name="answer_format_value_spanish_audio">Spanish Audio</string>
 
     <!-- UI Strings -->
     <string name="select_question_format">Select Question Format</string>
@@ -43,7 +43,7 @@
     <string name="work_category">Work</string>
 
     <!-- Phrases Fragment Strings -->
-    <string name="phrases_french_title">French</string>
+    <string name="phrases_spanish_title">Spanish</string>
     <string name="phrases_english_title">English</string>
     <string name="translate_title">Translate</string>
 

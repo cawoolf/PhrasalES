@@ -40,7 +40,7 @@
 
             android:layout_margin="8dp"
 
-            android:src="@drawable/france_flag_1"/>
+            android:src="@drawable/spain_flag_1"/>
 
 
         <ImageView
@@ -50,7 +50,7 @@
 
             android:layout_margin="8dp"
 
-            android:src="@drawable/france_flag_1"/>
+            android:src="@drawable/spain_flag_1"/>
 
         <ImageView
             android:id="@+id/progress_flag_3"
@@ -59,7 +59,7 @@
 
             android:layout_margin="8dp"
 
-            android:src="@drawable/france_flag_1"/>
+            android:src="@drawable/spain_flag_1"/>
 
     </LinearLayout>
 

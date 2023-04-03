@@ -12,7 +12,7 @@ import com.example.phrasales.PhrasalESApplication
 import com.example.phrasales.database.Phrase
 import com.example.phrasales.util.PhrasalUtil
 import com.example.phrasales.util.PhraseListAdapter
-import com.example.phrasalfr.databinding.ActivityEditDatabaseBinding
+import com.example.phrasales.databinding.ActivityEditDatabaseBinding
 
 
 import kotlinx.coroutines.runBlocking
