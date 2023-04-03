@@ -7,5 +7,5 @@ import androidx.room.PrimaryKey
 data class Phrase(
     val category: String,
     @PrimaryKey() val phraseEnglish: String,
-    val phraseFrench: String,
+    val phraseSpanish: String,
 )

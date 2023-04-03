@@ -13,27 +13,27 @@ import java.util.*
 class PhrasalUtil(val context: Context?) {
 
     private lateinit var mTextToSpeech: TextToSpeech
-    private lateinit var mENFRTranslator: Translator
-    private lateinit var mFRENTranslator: Translator
+    private lateinit var mENESTranslator: Translator
+    private lateinit var mESENTranslator: Translator
 
     private fun buildTranslators() {
         // Create an English-French Translator
         val options = TranslatorOptions.Builder()
             .setSourceLanguage(TranslateLanguage.ENGLISH)
-            .setTargetLanguage(TranslateLanguage.FRENCH)
+            .setTargetLanguage(TranslateLanguage.SPANISH)
             .build()
 
-        val englishFrenchTranslator = Translation.getClient(options)
+        val englishSpanishTranslator = Translation.getClient(options)
 
-        mENFRTranslator = englishFrenchTranslator
+        mENESTranslator = englishSpanishTranslator
 
         val options2 = TranslatorOptions.Builder()
-            .setSourceLanguage(TranslateLanguage.FRENCH)
+            .setSourceLanguage(TranslateLanguage.SPANISH)
             .setTargetLanguage(TranslateLanguage.ENGLISH)
             .build()
 
-        val frenchEnglishTranslator = Translation.getClient(options2)
-        mFRENTranslator = frenchEnglishTranslator
+        val spanishEnglishTranslator = Translation.getClient(options2)
+        mESENTranslator = spanishEnglishTranslator
 
     }
 
@@ -42,7 +42,8 @@ class PhrasalUtil(val context: Context?) {
      fun setUpTTS() {
         mTextToSpeech = TextToSpeech(context, TextToSpeech.OnInitListener {
             if(it== TextToSpeech.SUCCESS){
-                mTextToSpeech.language = Locale.FRENCH
+                val locSpanish = Locale("spa", "MEX")
+                mTextToSpeech.language = locSpanish
                 mTextToSpeech.setSpeechRate(1.0f)
                 Log.i("mTTS", "TTS Success")
             }
@@ -65,12 +66,12 @@ class PhrasalUtil(val context: Context?) {
 
     fun getENFRTranslator() : Translator {
         buildTranslators()
-        return mENFRTranslator
+        return mENESTranslator
     }
 
     fun getFRENTranslator() : Translator {
         buildTranslators()
-        return mFRENTranslator
+        return mESENTranslator
     }
 
 

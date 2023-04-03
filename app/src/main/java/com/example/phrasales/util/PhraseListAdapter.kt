@@ -38,7 +38,7 @@ class PhraseListAdapter(private val allPhrases: List<Phrase>, listener: IAdapter
 
 //        holder.category.text = item.category
         holder.english.text = item.phraseEnglish
-        holder.french.text = item.phraseFrench
+        holder.french.text = item.phraseSpanish
         holder.delete.setOnClickListener {
 
             // mListener is an instance of the IAdapterDeletePhrase
@@ -46,7 +46,7 @@ class PhraseListAdapter(private val allPhrases: List<Phrase>, listener: IAdapter
 
         }
 
-        holder.view.setOnClickListener { mListener.speakFrenchPhrase(item.phraseFrench) }
+        holder.view.setOnClickListener { mListener.speakFrenchPhrase(item.phraseSpanish) }
 
     }
 

@@ -21,6 +21,6 @@ interface PhraseDao {
     suspend fun deletePhrase(delete_phrase: String)
 
     // Mainly used for testing.
-    @Query("SELECT * FROM phrases_table WHERE phraseFrench= :french_phrase")
-    suspend fun getTargetPhrase(french_phrase: String): List<Phrase>
+    @Query("SELECT * FROM phrases_table WHERE phraseSpanish= :spanish_phrase")
+    suspend fun getTargetPhrase(spanish_phrase: String): List<Phrase>
 }

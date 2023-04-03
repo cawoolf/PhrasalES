@@ -19,7 +19,7 @@ class PhraseRepository(private val phraseDao: PhraseDao) {
     }
 
     // Mainly used for testing
-    suspend fun getTargetPhrase(frenchPhrase: String): List<Phrase> {
-        return phraseDao.getTargetPhrase(frenchPhrase)
+    suspend fun getTargetPhrase(spanishPhrase: String): List<Phrase> {
+        return phraseDao.getTargetPhrase(spanishPhrase)
     }
 }
