@@ -1,0 +1,82 @@
+package com.example.phrasales
+
+import android.os.Bundle
+import android.util.Log
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.example.phrasales.ui.MainViewModel
+import com.example.phrasales.util.PhrasalUtil
+import com.example.phrasales.databinding.ActivityMainBinding
+
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var mMainViewModel : MainViewModel
+    private lateinit var mPhrasalUtil: PhrasalUtil
+//    private val mMainViewModel: MainViewModel by viewModels<MainViewModel>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val navView: BottomNavigationView = binding.navView
+
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_home, R.id.navigation_quiz, R.id.navigation_phrases
+            )
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
+
+        setUpViewModel()
+        setUpQuizButtonObserver()
+        setUpPhrasesButtonObserver()
+        Log.i("mMA", "started")
+
+    }
+
+    private fun setUpQuizButtonObserver() {
+        mMainViewModel.navigateToQuiz.observe(this, Observer {
+
+            binding.navView.selectedItemId = R.id.navigation_quiz
+            Log.i("mMA", it.toString())
+
+        })
+    }
+
+    private fun setUpPhrasesButtonObserver() {
+        mMainViewModel.navigateToPhrases.observe(this, Observer {
+
+            binding.navView.selectedItemId = R.id.navigation_phrases
+            Log.i("mMA", it.toString())
+
+        })
+    }
+
+
+    private fun setUpViewModel() {
+
+        mMainViewModel = ViewModelProvider(this,
+            MainViewModel.MainViewModelFactory((this.application as PhrasalESApplication).phraseRepository,
+                "default"))
+            .get(MainViewModel::class.java)
+    }
+
+    private fun testDB() {
+
+    }
+
+}

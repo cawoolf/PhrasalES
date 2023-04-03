@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/fragment_quiz_parent_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.QuizFragment">
+    <!--android:paddingTop="75dp"-->
+
+    <ProgressBar
+        android:id="@+id/quiz_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0"
+
+        style="?android:attr/progressBarStyleHorizontal"
+        android:secondaryProgress="0"
+        android:visibility="visible"
+        android:layout_margin="8dp"
+
+        android:background="@drawable/progress_bar_background"
+
+        android:progressDrawable="@drawable/progress_bar_french_flag_gradient"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/quiz_question_count_TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/quiz_question_count_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="10/10"
+
+        style="@style/ActivityHeaders"
+
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+
+        app:layout_constraintTop_toBottomOf="@id/quiz_progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/quiz_questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAlignment="center"
+        android:text="Quiz"
+
+        style="@style/ActivityHeaders"
+
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@id/quiz_question_count_TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/quiz_questionImageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/quiz_questionImageButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/ic_baseline_volume_up_24"
+        android:background="@drawable/quiz_audio_button"
+
+        android:layout_margin="16dp"
+        android:stateListAnimator="@animator/star_button_press"
+
+        app:layout_constraintTop_toBottomOf="@+id/quiz_questionTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/quiz_answer_gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <GridLayout
+        android:id="@+id/quiz_answer_gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:columnCount="2"
+        android:rowCount="2"
+        android:orientation="vertical"
+
+
+        app:layout_constraintTop_toBottomOf="@id/quiz_questionImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/submit_quiz_button"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/quiz_answer_A_linearLayout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/quiz_button_not_selected"
+
+            android:layout_margin="16dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/quiz_answer_A_linearLayout_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:text="Answer Choice A"
+
+                style="@style/TextContent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/quiz_answer_B_linearLayout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/quiz_button_not_selected"
+
+            android:layout_margin="16dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/quiz_answer_B_linearLayout_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+
+                style="@style/TextContent"
+
+                android:text="Answer Choice B"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/quiz_answer_C_linearLayout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/quiz_button_not_selected"
+
+            android:layout_margin="16dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/quiz_answer_C_linearLayout_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+
+                style="@style/TextContent"
+
+
+                android:text="Answer Choice C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/quiz_answer_D_linearLayout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/quiz_button_not_selected"
+
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/quiz_answer_D_linearLayout_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+
+                style="@style/TextContent"
+
+                android:text="Answer Choice D"/>
+        </LinearLayout>
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/submit_quiz_button"
+        android:layout_width="@dimen/round_action_button_width"
+        android:layout_height="@dimen/round_action_button_height"
+        style="@style/RoundActionButton"
+        android:layout_margin="16dp"
+
+        android:gravity="center"
+
+        android:stateListAnimator="@animator/star_button_press"
+
+        app:layout_constraintBottom_toTopOf="@id/quiz_submit_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:layout_width="@dimen/button_star_width"
+            android:layout_height="@dimen/button_star_height"
+            android:background="@drawable/white_star_vector"
+
+            android:layout_marginBottom="10dp"
+
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/quiz_submit_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_answer"
+
+        style="@style/ActionButtonText"
+
+        android:layout_marginBottom="50dp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,166 @@
+PhrasalFR Notes!
+
+Command + shift + arrow to move code
+
+ToDo:
+
+Add the option for Spanish!
+    > Just create a Spanish version
+    > Publish twice on the app store, one for each language
+        > Ads? Free?
+
+
+> Publish
+
+Real Tasks:
+> On Fresh install, no default quiz settings
+
+> How many right or wrong.
+    > Screen for when you finished the quiz. Gives a score.
+
+> Update the UI!
+Follow Material design, other quiz apps. Duolingo?
+Following Duolingo, make the submit button a circle**
+Make all other UI Buttons circles like Duo**
+Create a progress bar for the quiz
+Disable landscape mode
+
+> Update TextToSpeech
+
+
+****************************************************************************************************
+Feature Ideas:
+Add a "Your quiz wasn't finished! Resume or start new quiz?" Alert
+
+> Take the coding in flow course, then take a firebase course as prep for Meditation app
+
+> It would be cool to set up android studio to target Docker (Firebase?)
+    > This would be super cool and useful for the Meditation App
+    > Test out notifications and stuff
+
+> You could even like parse a book into the application.. and break each sentence into a question
+item.
+
+> Add a streak feature
+> Add a feature where you have to add phrases to the db every day
+> Add a feature where you can create your own category
+    > School, Work, Cooking, ext
+> Add a feature where you chose which category to add phrases to
+> Feature where you can upload a book to the db, and have the sentences server as phrases for the quiz
+****************************************************************************************************
+Bugs:
+
+> Fix the runBlocking{} configuration. Not a great practice.
+> Read about Coroutines!! runBlocking{} is not the best way. Blocks the main thread
+    > Use other scopes in combination with LiveData to load quiz data in real time with out blocking
+      the main thread
+
+On fresh install, default sharedPrefs for question and answer not formatting quiz correctly
+User should be able to click right on to quiz on first install without making quiz settings
+
+Fixed:
+
+Fix the edit text infinite loop bug.. fixed
+https://stackoverflow.com/questions/16257757/infinite-loop-error-edittext
+
+If navigating to the quiz repeatedly, can trigger the end of the quiz. Increases the question count.
+    > Reset the question count on each load of the quiz.
+
+
+> User Phrase category will crash if there isn't enough data to build the quiz
+    > Index out of bounds
+
+> MainViewModel is not initialized properly! It's resetting or recreating a viewmodel each time the fragment changes
+
+> Also play audio automatically when French audio is selected.
+French audio for French Text quiz setting not playing on first click from quiz
+
+Small bug where if you don't click the answer, it will be wrong even if it's right
+    > You have to click to actually select the answer, even if it is shown as selected.
+
+Setting visibility with text View and ImageButton not working programmatically?
+
+App appears to crash if you switch screens and the translator is not done downloading
+Also looks like it crashes when go to quiz without selecting settings.
+
+Still crashing on fresh install?
+    > DB isn't "primed".. If you add an entry to it, then all the other data shows up
+    > But until you make that first request, you can't getAllPhrases. Always returns null
+    on the first try, but works after that..
+    > DB is primed in PhrasalFRApplication.. So now it works on Fresh install, but that's pretty weird.
+
+*************************************************************************************************************
+***Work Log***
+
+> Add a counter so you know how many entries are left.
+
+10/27/22
+> Make it so that the quiz feature does not repeat phrases, or just loops through every phrase.
+> Fixed quiz crash when DB doesn't have enough data
+> Translate on text changed
+> User Phrase category will crash if there isn't enough data to build the quiz
+    > Index out of bounds
+
+10/26/22
+> Be able to view a list of all phrases and words. Add or remove them from the db.
+
+
+9/9/22
+Refactored viewModels
+
+8/22/22
+
+Simplifying the question process and database stuff
+Also.. If you build the question first on the Home Page, and then pass it into the Quiz.. You won't
+have to runBlocking.. Or just have some timer that automatically refreshes the Quiz page.
+
+
+7/18/22
+> User Phrase category will crash if there is'nt enough data to build the quiz
+    > Index out of bounds
+
+> Implement a add phrases using french as the input
+    > Translate fr >> en then add that phrase to the db
+    > More accurate phrases probably. Have Lili add some to the app.
+
+7/13/22
+Implemented start of load phrases by category feature.
+Wrote some database tests
+
+7/11/22
+Pre populate DB with a db file generated in SQLiteBrowser
+
+6/16/22
+Added some audio for the french text
+Wrote some basic navigation tests
+
+6/15/22
+> Set up quiz!
+    > Start adding on clicks for audio and answer selection
+    > Correct or wrong pop up
+    > Submit button? Would kind of be needed for the audio function so you can hear the phrases
+    before submitting
+
+> Fix git log credentials.. -_-
+    > Testing out the git... again!
+    > Looks like it's at least pushed!
+    > Testing again.
+
+6/12/22
+Started adding answer functionality for the quiz. Answers load english and french text.;
+
+6/9/22
+Add sharedPrefs for quiz settings!
+
+6/6/22
+Maybe use SharedPreferences to save the titles of the lists. Seems a lot easier then
+doing a weird DB query.
+ > Actually a db querry for all categories, and then passing that to programmatically create chips is probly the most
+ correct way
+ > Or maybe not?.. Just add a set of strings to the sharedPrefs that contains the categories, and then use that set
+  amd String to query the db for all Phrases with the same String?
+
+6/5/22
+Set up DB and basic navigation
+Implement add Phrases
+    > Google translate ML Kit
